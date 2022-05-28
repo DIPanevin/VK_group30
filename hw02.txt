@@ -1,4 +1,6 @@
-﻿1. Сделать папку dir_1
+﻿HW 02.1 Terminal
+
+1. Сделать папку dir_1
 mkdir dir_1
  2. Зайти в папку dir_1
 cd dir_1
