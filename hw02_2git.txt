@@ -1,4 +1,4 @@
-HW 02.2 GIT Homework 
+﻿HW 02.2 GIT Homework 
 
 Для выполнения задания у вас должен быть установлен для Windows - GitBash.
 - стоит
@@ -24,6 +24,7 @@ JSON
 git clone https://github.com/DIPanevin/JSON.git JSON
  
  6. Внутри локального JSON создать файл “new.json”.
+cd JSON
 touch new.json
  
  7. Добавить файл под гит.
@@ -122,23 +123,131 @@ git push origin main
 
 XML
  21. Создать внешний репозиторий c названием XML.
+Создать новый репозиторий. 
+
  22. Клонировать репозиторий XML на локальный компьютер.
+git clone https://github.com/DIPanevin/XML.git
+
  23. Внутри локального XML создать файл “new.xml”.
+cd XML
+touch new.xml
+
  24. Добавить файл под гит.
+git add new.xml
+
  25. Закоммитить файл.
+git commit -a -m "add new.xml"
+
  26. Отправить файл на внешний GitHub репозиторий.
+git push origin main
+
  27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+vim new.xml
+INSERT
+<?xml version="1.0" encoding="windows-1251"?>
+<UserInfo>
+   <FirstName>Dmitriy</FirstName>
+   <Surname>Panevin</Surname>
+   <MiddleName>Igorevich</MiddleName>
+   <PetCount>0</PetCount>
+   <DesiredSalary>150000</DesiredSalary>
+</UserInfo>
+ESC
+:wq
+
  28. Отправить изменения на внешний репозиторий.
+git commit -a -m "append new.xml"
+git push origin main
+
  29. Создать файл preferences.xml
+touch preferences.xml
+
  30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+vim preferences.xml
+INSERT
+<?xml version="1.0" encoding="windows-1251"?>
+<Preferences>
+   <FavoriteData>
+      <Film>Dikari</Film>
+      <Series>Umbrella Academy</Series>
+      <Meal>Roasted chicken</Meal>
+      <Season>Summer</Summer>
+   </FavoriteData>
+   <CountryToVisit>Norway</CountryToVisit>
+</Preferences>
+ESC
+:wq 
+
+
  31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+vim skills.xml
+INSERT
+<?xml version="1.0" encoding="windows-1251"?>
+<Acquired>
+   <SoftSkills>
+      <SS01>flexibility</SS01>
+      <SS02>communication</SS02>
+      <SS03>lead ability</SS03>
+      <SS04>positivity</SS04>
+   </SoftSkills>
+   <HardSkills>
+      <HS01>JSON</HS01>
+      <HS02>JavaScript</HS02>
+      <HS03>Postman</HS03>
+      <HS04>Jira</HS04>
+      <HS05>Agile</HS05>
+      <HS06>Terminal<HS06>
+      <HS07>GIT</HS07>
+      <HS08>Python</HS08>
+      <HS09>Charles</HS09>
+      <HS10>SQL</HS10>
+      <HS11>HTML</HS11>
+   </Hardskills>
+</Acquired>
+ESC
+:wq
+
  32. Сделать коммит в одну строку.
+git add -A && git commit -a -m "add preferences.xml and skills.xml"
+
  33. Отправить сразу 2 файла на внешний репозиторий.
+git push origin main
+
  34. На веб интерфейсе создать файл bug_report.xml.
+Создать новый файл
+Имя - bug_report.xml
+
  35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Сохранить
+
  36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+Редактировать файл bug_report.xml
+<?xml version="1.0" encoding="windows-1251"?>
+<Data>
+   <Type>bug report</Type>
+   <Header>
+      <ID>1</ID>
+      <Status>created</Status>
+      <Severity>critical</Severity>
+      <BugSummary>Login form hasn't OK button</BugSummary>
+   </Header>
+   <Body>
+     <ReproduceSteps>
+        <Step01>Run application</Step01>
+        <Step02>Wait while login form loaded</Step02>
+     </ReproduceSteps>
+     <Result>login form loaded, but there isn't OK button</Result>
+     <ExpectedResult>login form loaded, OK button is on the right bottom corner of form</ExpectedResult>
+   </Body>
+</Data>
+
  37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Сохранить изменения
+
  38. Синхронизировать внешний и локальный репозиторий XML
+git pull
+
+
 TXT
  1. Создать внешний репозиторий c названием TXT.
  2. Клонировать репозиторий TXT на локальный компьютер.
