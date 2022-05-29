@@ -86,7 +86,7 @@ ESC
 :wq
  
  15. Отправить сразу 2 файла на внешний репозиторий.
-git add preferences.json, skills.json
+git add preferences.json skills.json
 git commit -a -m "add prefences.json and skills.json" 
 git push origin main
  
