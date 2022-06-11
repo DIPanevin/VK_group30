@@ -1,0 +1,13 @@
+Bug report
+Header
+  ID: 1
+  Status: created
+  Severity: critical
+  BugSummary: Login form hasn't OK button
+
+Body
+  ReproduceSteps:
+    1. Run application
+    2. Wait while login form loaded
+  Result: login form loaded, but there isn't OK button
+  ExpectedResult: login form loaded, OK button is on the right bottom corner of form
