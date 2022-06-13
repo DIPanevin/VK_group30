@@ -18,13 +18,28 @@ console.log ('TripleDIV = ',TripleDIV(a,b));
 
 function BoringNum(x)
 {
+    let output_x = String(x);
+    if (isNaN(x)) {
+        console.log(`${output_x} - это не число!`);
+        return;
+    }
+    if (!(x % 1) == 0) {
+        console.log('Число %d дробное и скучное...', x);
+        return;
+    }
+    if ((x>Number.MAX_SAFE_INTEGER) || (x<-Number.MAX_SAFE_INTEGER)) {
+        console.log('%d - cлишком большое число.', x);
+        return;
+    }
     if (x%5 == 0) 
         console.log('Число %d делится на 5!', x);
-    else
+    else {
         if (x%11 == 0) 
             console.log('Число %d делится на 11!', x);
-        else 
+        else { 
             console.log('%d - скучное число...', x);
+        }
+    }        
 };
 
 const readline = require('readline').createInterface({
