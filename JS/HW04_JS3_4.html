@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HW JS 4*</title>
+
+<script>
+function CheckAge4() {
+    let age_data = prompt('Введите ваш возраст?',null);
+    if (isNaN(age_data)) {
+        alert(`Введенное значение ${age_data} нельзя преобразовать в число!`);
+        return(1);
+    }
+
+    let age_2 = 18;
+    let age_3 = 60;
+    if (age_data < age_2)
+        alert(`You don't have access cause your age is ${age_data} It's less then.`);
+        else if ((age_data >= age_2) && (age_data < age_3)) 
+            alert(`Welcome !`)
+            else if (age_data > age_3) 
+                alert(`Keep calm and look Culture channel`)
+                else 
+                    alert(`Technical work`);
+};
+
+CheckAge4();
+
+</script>
+
+</head>
+<body>
+</body>
+</html>
