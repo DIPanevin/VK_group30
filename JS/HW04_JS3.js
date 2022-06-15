@@ -17,6 +17,7 @@ if (age_data < age_2)
                 console.log(`Technical work`);
 };
 
+console.log('Задание 1');
 CheckAge1(17);
 CheckAge1(18);
 CheckAge1(60); //Единственное значение, при котором выдается Technical work.
@@ -26,7 +27,8 @@ CheckAge1(61);
 // 2*:
 // Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка.
 function CheckAge2(age_data) {
-    if (isNaN(age_data)) {
+    console.log(typeof(age_data));
+    if ((isNaN(age_data)) || (typeof(age_data) == 'string')) {
         console.log(`Для правильной работы введите значение возраста цифрой, без спецсимволов, пробелов и букв.`);
         return(1);
     }
@@ -42,6 +44,11 @@ function CheckAge2(age_data) {
                     console.log(`Technical work`);
     };
 
+console.log('Задание 2');
+CheckAge2('17');
+CheckAge2('ssdf')
+CheckAge2(true); //Пропускает к расчету, как значение - 1, в задании про это не слова. 
+CheckAge2('true');
 CheckAge2(17);
 CheckAge2(18);
 CheckAge2(60); //Единственное значение, при котором выдается Technical work.
@@ -51,13 +58,10 @@ CheckAge2(61);
 // 3**:
 // Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number
 function CheckAge3(age_data) {
-    if (typeof(age_data) == 'string') {
-        let save_age = age_data; // Только для вывода некорректного значения в консоль.
-        age_data = Number(age_data);
-        if (isNaN(age_data)) {
-            console.log(`Введенное значение ${save_age} нельзя преобразовать в число!`);
-            return(1);
-        }
+    console.log(typeof(age_data));
+    if ((isNaN(age_data)) || (typeof(age_data) == 'boolean')) {
+        console.log(`Для правильной работы введите значение возраста цифрой, без спецсимволов, пробелов и букв.`);
+        return(1);
     }
     
     let age_2 = 18;
@@ -72,6 +76,7 @@ function CheckAge3(age_data) {
                     console.log(`Technical work`);
 };
 
+console.log('Задание 3');
 CheckAge3('2');
 CheckAge3('22');
 CheckAge3('2f');

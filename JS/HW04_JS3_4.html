@@ -8,11 +8,11 @@
 <script>
 function CheckAge4() {
     let age_data = prompt('Введите ваш возраст?',null);
-    if (isNaN(age_data)) {
-        alert(`Введенное значение ${age_data} нельзя преобразовать в число!`);
+    if ((isNaN(age_data)) || (typeof(age_data) == 'boolean')) {
+        alert(`Введенное значение ${age_data} типа ${typeof(age_data)} нельзя преобразовать в число!`);
         return(1);
     }
-
+     
     let age_2 = 18;
     let age_3 = 60;
     if (age_data < age_2)
