@@ -8,8 +8,13 @@
 <script>
 function CheckAge4() {
     let age_data = prompt('Введите ваш возраст?',null);
-    if ((isNaN(age_data)) || (typeof(age_data) == 'boolean')) {
-        alert(`Введенное значение ${age_data} типа ${typeof(age_data)} нельзя преобразовать в число!`);
+    if ((isNaN(age_data)) || 
+        (typeof(age_data) == 'boolean') || 
+        (typeof(age_data) == 'object') ||
+        (typeof(age_data) == null) ||
+        (age_data.lenght == 0) ||
+        (age_data <= 0)) {
+        console.log(`Для правильной работы введите значение возраста цифрой, без спецсимволов, пробелов и букв.`);
         return(1);
     }
      

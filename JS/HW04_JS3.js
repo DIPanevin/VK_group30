@@ -17,18 +17,18 @@ if (age_data < age_2)
                 console.log(`Technical work`);
 };
 
-console.log('Задание 1');
-CheckAge1(17);
-CheckAge1(18);
-CheckAge1(60); //Единственное значение, при котором выдается Technical work.
-CheckAge1(61);
+// console.log('Задание 1');
+// CheckAge1(17);
+// CheckAge1(18);
+// CheckAge1(60); //Единственное значение, при котором выдается Technical work.
+// CheckAge1(61);
 
 
 // 2*:
 // Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка.
 function CheckAge2(age_data) {
     console.log(typeof(age_data));
-    if ((isNaN(age_data)) || (typeof(age_data) == 'string')) {
+    if (typeof(age_data) !== 'number') {
         console.log(`Для правильной работы введите значение возраста цифрой, без спецсимволов, пробелов и букв.`);
         return(1);
     }
@@ -44,22 +44,28 @@ function CheckAge2(age_data) {
                     console.log(`Technical work`);
     };
 
-console.log('Задание 2');
-CheckAge2('17');
-CheckAge2('ssdf')
-CheckAge2(true); //Пропускает к расчету, как значение - 1, в задании про это не слова. 
-CheckAge2('true');
-CheckAge2(17);
-CheckAge2(18);
-CheckAge2(60); //Единственное значение, при котором выдается Technical work.
-CheckAge2(61);
+// console.log('Задание 2');
+// CheckAge2('17');
+// CheckAge2('ssdf')
+// CheckAge2(true);
+// CheckAge2('true');
+// CheckAge2(17);
+// CheckAge2(18);
+// CheckAge2(60); //Единственное значение, при котором выдается Technical work.
+// CheckAge2(61);
+// CheckAge2('');
 
 
 // 3**:
 // Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number
 function CheckAge3(age_data) {
     console.log(typeof(age_data));
-    if ((isNaN(age_data)) || (typeof(age_data) == 'boolean')) {
+    if ((isNaN(age_data)) || 
+        (typeof(age_data) == 'boolean') || 
+        (typeof(age_data) == 'object') ||
+        (typeof(age_data) == null) ||
+        (age_data.lenght == 0) ||
+        (age_data <= 0)) {
         console.log(`Для правильной работы введите значение возраста цифрой, без спецсимволов, пробелов и букв.`);
         return(1);
     }
@@ -76,10 +82,15 @@ function CheckAge3(age_data) {
                     console.log(`Technical work`);
 };
 
-console.log('Задание 3');
-CheckAge3('2');
-CheckAge3('22');
-CheckAge3('2f');
+// console.log('Задание 3');
+// CheckAge3('2');
+// CheckAge3('22');
+// CheckAge3('2f');
+// CheckAge3('17');
+// CheckAge3('ssdf')
+// CheckAge3(true);
+// CheckAge3('true');
+// CheckAge3('');
 
 // 4***:
 // Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
